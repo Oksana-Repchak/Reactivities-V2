@@ -1,0 +1,17 @@
+namespace Domain;
+
+public class Activity
+{
+    public string Id { get; set; } = Guid.NewGuid().ToString();
+    public required string Title { get; set; }
+    public DateTime Date { get; set; } = DateTime.Now;
+    public required string Description { get; set; } = string.Empty;
+    public required string Category { get; set; } = string.Empty;
+    public bool IsCancelled { get; set; }
+
+    //location props
+    public required string City { get; set; } 
+    public required string Venue { get; set; } 
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+}
